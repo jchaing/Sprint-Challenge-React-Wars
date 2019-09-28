@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CharacterDisplay from './components/CharacterDisplay';
 import PaginateButton from './components/PaginateButton';
 import './App.css';
+import { Container } from 'reactstrap';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -28,12 +29,14 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <div>
-        <PaginateButton paginateFunction={prev} buttonLabel="prev" />
-        <PaginateButton paginateFunction={random} buttonLabel="random" />
-        <PaginateButton paginateFunction={next} buttonLabel="next" />
-      </div>
-      <CharacterDisplay id={id} />
+      <Container>
+        <div className="mt-5">
+          <PaginateButton paginateFunction={prev} buttonLabel="prev" />
+          <PaginateButton paginateFunction={random} buttonLabel="random" />
+          <PaginateButton paginateFunction={next} buttonLabel="next" />
+        </div>
+        <CharacterDisplay id={id} />
+      </Container>
     </div>
   );
 };

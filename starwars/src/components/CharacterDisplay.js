@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Card, CardBody } from 'reactstrap';
 
 const useFetchCharacter = changeID => {
   const [name, setName] = useState();
@@ -47,15 +48,19 @@ const CharacterDisplay = ({ id }) => {
   const retrieved = useFetchCharacter(id);
 
   return (
-    <div>
-      <h2>Star Wars Character</h2>
-      <h3>Name: {retrieved.name}</h3>
-      <h3>Gender: {retrieved.gender}</h3>
-      <h3>Birth Year: {retrieved.birth}</h3>
-      <h3>Eye Color: {retrieved.eye}</h3>
-      <h3>Hair Color: {retrieved.hair}</h3>
-      <h3>Skin Color: {retrieved.skin}</h3>
-      <h3>Weight: {retrieved.mass}</h3>
+    <div className="mt-2">
+      <Card>
+        <CardBody>
+          <h2>Star Wars Character</h2>
+          <h3>Name: {retrieved.name}</h3>
+          <h3>Gender: {retrieved.gender}</h3>
+          <h3>Birth Year: {retrieved.birth}</h3>
+          <h3>Eye Color: {retrieved.eye}</h3>
+          <h3>Hair Color: {retrieved.hair}</h3>
+          <h3>Skin Color: {retrieved.skin}</h3>
+          <h3>Weight: {retrieved.mass}</h3>
+        </CardBody>
+      </Card>
     </div>
   );
 };
