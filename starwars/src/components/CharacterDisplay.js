@@ -48,17 +48,31 @@ const CharacterDisplay = ({ id }) => {
   const retrieved = useFetchCharacter(id);
 
   return (
-    <div className="mt-2">
+    <div className="mt-2 card-style">
       <Card>
         <CardBody>
           <h2>Star Wars Character</h2>
-          <h3>Name: {retrieved.name}</h3>
-          <h3>Gender: {retrieved.gender}</h3>
-          <h3>Birth Year: {retrieved.birth}</h3>
-          <h3>Eye Color: {retrieved.eye}</h3>
-          <h3>Hair Color: {retrieved.hair}</h3>
-          <h3>Skin Color: {retrieved.skin}</h3>
-          <h3>Weight: {retrieved.mass}</h3>
+          <h3>
+            Name: <span className="data">{retrieved.name}</span>
+          </h3>
+          <h3>
+            Gender: <span className="data">{retrieved.gender}</span>
+          </h3>
+          <h3>
+            Birth Year: <span className="data">{retrieved.birth}</span>
+          </h3>
+          <h3>
+            Eye Color: <span className="data">{retrieved.eye}</span>
+          </h3>
+          <h3>
+            Hair Color: <span className="data">{retrieved.hair}</span>
+          </h3>
+          <h3>
+            Skin Color: <span className="data">{retrieved.skin}</span>
+          </h3>
+          <h3>
+            Weight: <span className="data">{retrieved.mass}</span>
+          </h3>
         </CardBody>
       </Card>
     </div>

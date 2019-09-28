@@ -5,7 +5,7 @@ const PaginateButton = props => {
   return (
     <Button
       className="mx-1"
-      color="warning"
+      color="primary"
       size="lg"
       onClick={props.paginateFunction}
     >
